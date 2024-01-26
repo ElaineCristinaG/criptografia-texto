@@ -1,2 +1,2 @@
 # decodificador
-Este projeto criptografa e descriptografa um texto
+Este projeto codifica e descodifica um texto

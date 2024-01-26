@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+* {
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    box-sizing:border-box;
+    background-color: #ffffff;  
+    color:#495057;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items:start;
+    padding: 1% 8%;
+}
+
+.flexivel_input{
+    height: auto;
+    width: 40%;
+}
+
+main section textarea{
+    background-color: #e1eaf3;
+    width: 100%;
+}
+
+.flexivel_botoes{
+    display: flex;
+    width: auto;
+    text-align: center;
+    gap: 0.5%;
+    padding: 3% 4% 3% 2%; 
+}
+
+.botao{
+    background-color: rgb(10, 56, 113,1); 
+    border-radius: 1rem;
+    color:rgb(255, 255, 255,1); 
+    font-size: 1rem;
+}
+
+.botoes_esquerda{
+    padding: 4% 15%; 
+    width: 80%;   
+}
+
+.div_botao_copiar{
+  padding: 5% 0%;
+}
+
+.botao_copiar{
+    padding: 3% 10%; 
+    width: 47%;   
+   
+}
+
+footer{
+    font-family: 'Gill Sans', sans-serif; 
+    color:rgb(242, 242, 248);
+    background-color:rgb(52, 52, 98);
+    padding-bottom: 1%;
+    width: auto;
+    gap: 10%;   
+}
+
+footer section{
+    display: flex;
+    justify-content: center; 
+} 
+
+.footer_texto{
+    text-align: center;
+    padding: 1%;
+}
+
+.footer_icones{
+   width: 15%;
+   height: 2%; 
+   text-align: center;
+}
+
+section textarea {
+    border-radius: 5%;
+    border: none;
+    font-size: 150%;
+    white-space:pre-line;
+    padding: 2% 1%;
+    width: 70vh;
+    height: 50vh;  
+}
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 1% 0%;
+}  
+
+.flexivel_img_span{
+    display: flex;
+    padding-top: 2%;
+}
+
+.flexivel_span{
+  padding-inline-start:2%;
+  font-size: 0.75rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.flexivel_imagem{
+    width: auto;
+    height: auto;  
+}
+
+section h2{
+ color: #343A40;
+ font-size: 1.5rem;
+ padding: 1%;
+ 
+}
+
+section p{
+    color: #495057;
+    text-align: center;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 24px */ 
+    padding-bottom: 2%;  
+}
+
+.flexivel_output{
+   
+    width: 50%;
+    height: 100%;
+    border-radius: 5%;
+    background-color: #e1eaf3;
+    text-align: center;  
+}
+
+.imagem_menino{
+    width:40%;
+    height: 40%;
+    padding-top: 1%;
+    
+}
+
+@media(max-width:1000px){
+    main{
+        flex-direction: column;
+        align-items: center;
+        padding: 1%;
+    }
+    header {
+        width: 100%;
+        text-align: center; 
+        flex-direction: column; 
+    }
+    .flexivel_botoes{
+        flex-direction: column;
+        padding: 5% 0%;
+        align-items: center;
+    }
+    .botao{
+        font-size: 0.70rem;
+        border-radius: 0.50rem;  
+        margin-left: 1%;  
+        
+    }
+
+}
