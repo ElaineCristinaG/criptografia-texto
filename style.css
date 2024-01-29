@@ -153,13 +153,6 @@ section p{
     
 }
 
-.textoCodificado{
-    display: none;
-}
-
-.textoVazio{
-    display: block;
-}
 
 @media(max-width:1000px){
     main{
