@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded",function(){
 
         const texto_entrada = document.getElementById("texto_entrada").value;
         const texto_saida = texto_entrada
+        .replace(/i/g,"imes")
         .replace(/a/g,"ai")
         .replace(/e/g,"enter")
-        .replace(/i/g,"imes")
         .replace(/o/g,"obter")
         .replace(/u/g,"ufat")
     
@@ -52,13 +52,15 @@ document.addEventListener("DOMContentLoaded",function(){
             .replace(/obter/g, "o")
             .replace(/ufat/g, "u");
     
-        document.getElementById("texto_decodificado").textContent = texto_decodificado;
+        document.getElementById("texto_codificado").textContent = texto_decodificado;
     }
     
+    const botao_decodifica = document.getElementById("botao_decodifica");
+    botao_decodifica.addEventListener("click", decodificar);
 
-    function copiar_texto_codificado(){
+    function copiar_texto(){
 
-        const texto_codificado = document.getElementById("texto_codificado");
+        const texto_codificado = document.getElementById("texto_codificado").value;
         const inputElement = document.createElement("input");
         inputElement.value = texto_codificado;
         document.body.appendChild(inputElement);
@@ -80,7 +82,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
 
     const botao_copiar = document.getElementById("botao_copiar");
-    botao_copiar.addEventListener("click", copiar_texto_codificado);
+    botao_copiar.addEventListener("click", copiar_texto);
 
     
 
