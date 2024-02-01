@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 
+:root{
+    --cor-azul-escuro: rgb(10, 56, 113,1);
+    --cor-azul-medio:rgb(6, 23, 150);
+    --cor-azul-claro: rgb(130, 152, 179);
+    --cor-branca: rgb(225, 234, 243);
+    --cor-cinza: rgb(73, 80, 87);
+    --cor-cinza-escuro:rgb(52, 58, 64);
+}
+
 * {
     width: auto;
     margin: 0;
@@ -9,18 +18,33 @@
 body{
     height: 100vh;
     box-sizing:border-box;
-    background-color: #ffffff;  
-    color:#495057;
+    color: var(--cor-cinza);
     height: 100vh;
     font-family: 'Inter', sans-serif;
 }
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 1% 0%;
+}  
+
+
+ header h1{
+    font-size: 1.5rem;
+ }
+
+ h2{
+    font-size: 1.5rem;
+ }
 
 main{
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-items:start;
-    padding: 1% 8%;
+    padding: 1% 5% 1% 5%;
+   
 }
 
 .flexivel_input{
@@ -28,25 +52,37 @@ main{
     width: 40%;
 }
 
-main section textarea{
-    background-color: #e1eaf3;
+ section textarea{
+    background-color: var(--cor-branca);
     width: 100%;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 150%;
+    padding: 20% 5%;
+   
 }
 
 .flexivel_botoes{
     display: flex;
     width: auto;
-    text-align: center;
-    gap: 0.5%;
-    padding: 3% 4% 3% 2%; 
+    align-items: center;
+    gap: 5%;
+    padding: 15% 4% 3% 2%; 
 }
 
 .botao{
-    background-color: rgb(10, 56, 113,1); 
-    border-radius: 1rem;
-    color:rgb(255, 255, 255,1); 
+    background-color: var(--cor-azul-escuro);
+    border-radius: 0.5rem;
+    color: var(--cor-branca);
     font-size: 1rem;
     cursor: pointer;
+}
+
+button:active{
+    background-color: var(--cor-azul-medio);
+}
+button:disabled{
+    background-color: var(--cor-azul-claro);
 }
 
 .botoes_esquerda{
@@ -55,19 +91,80 @@ main section textarea{
 }
 
 .div_botao_copiar{
-  padding: 5% 0%;
+  padding: 10% 0% 0% 0%;
+  align-items: center;
+}
+
+.texto_codificado{
+    padding: 20% 0% 20% 0%;
+    border-radius: 0.5rem;
+    background-color: var(--cor-branca);
 }
 
 .botao_copiar{
     padding: 3% 10%; 
-    width: 47%;   
+    width: 47%;  
+}
+
+.flexivel_img_span{
+    display: flex;
+    padding-top: 2%;
+}
+
+.flexivel_span{
+  padding-inline-start:2%;
+  font-size: 0.75rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.flexivel_imagem{
+    width: auto;
+    height: auto;  
+}
+
+section h2{
+ color:var(--cor-cinza-escuro);
+ font-size: 1.5rem;
+ padding: 1%;
+ 
+}
+
+section p{
+    color: var(--cor-cinza);
+    text-align: center;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 24px */ 
+    padding-top: 2%;  
+}
+
+.flexivel_output{
    
+    width: 50%;
+    height: 100%;
+    text-align: center;   
+}
+
+.texto_vazio{
+    padding-top: 1%;
+}
+
+.imagem_menino{
+    width:40%;
+    height: 40%;
+    
+}
+
+.texto_saida{
+    padding-top: 1%;   
+    align-items: center;
 }
 
 footer{
     font-family: 'Gill Sans', sans-serif; 
-    color:rgb(242, 242, 248);
-    background-color:rgb(52, 52, 98);
+    color:var(--cor-branca);
+    background-color:var(--cor-azul-escuro);
     padding-bottom: 1%;
     width: auto;
     gap: 10%;   
@@ -89,83 +186,23 @@ footer section{
    text-align: center;
 }
 
-section textarea {
-    border-radius: 5%;
-    border: none;
-    font-size: 150%;
-    white-space:pre-line;
-    padding: 2% 1%;
-    width: 70vh;
-    height: 50vh;  
-}
-
-header{
-    display: flex;
-    align-items: center;
-    padding: 1% 0%;
-}  
-
-.flexivel_img_span{
-    display: flex;
-    padding-top: 2%;
-}
-
-.flexivel_span{
-  padding-inline-start:2%;
-  font-size: 0.75rem;
-  font-family: 'Inter', sans-serif;
-}
-
-.flexivel_imagem{
-    width: auto;
-    height: auto;  
-}
-
-section h2{
- color: #343A40;
- font-size: 1.5rem;
- padding: 1%;
- 
-}
-
-section p{
-    color: #495057;
-    text-align: center;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5rem; /* 24px */ 
-    padding-bottom: 2%;  
-}
-
-.flexivel_output{
-   
-    width: 50%;
-    height: 100%;
-    border-radius: 5%;
-    background-color: #e1eaf3;
-    text-align: center;  
-}
-
-.imagem_menino{
-    width:40%;
-    height: 40%;
-    padding-top: 1%;
-    
-}
-
 
 @media(max-width:1000px){
     main{
         flex-direction: column;
         align-items: center;
-        padding: 1%;
+        padding: 1% 0% 5% 0%;
     }
     header {
         width: 100%;
         text-align: center; 
         flex-direction: column; 
     }
+
+    header img{
+        width: 10vw;
+    }
+
     .flexivel_botoes{
         flex-direction: column;
         padding: 5% 0%;
@@ -176,6 +213,15 @@ section p{
         border-radius: 0.50rem;  
         margin-left: 1%;  
         
+    }
+
+    footer div span{
+        font-size: 0.7rem;
+        
+    }
+    footer{
+        height: 10vh;
+        padding-top: 5%;
     }
 
 }

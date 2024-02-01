@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded",function(){
 
     document.getElementById("texto_entrada").value = "";
+    document.getElementById("botao_decodifica").disabled = true;
+    document.getElementById("botao_codifica").disabled = false;
 
     const saida_texto_codificado = document.getElementById("saida_texto_codificado");
     const texto_vazio = document.getElementById("texto_vazio");
@@ -8,14 +10,18 @@ document.addEventListener("DOMContentLoaded",function(){
     saida_texto_codificado.style.display = "none";
     texto_vazio.style.display = "block";
 
+    function habilitaDesabilitaBotoes(){
+        document.getElementById("botao_decodifica").disabled = false;
+    }
+
     /**Sessão Codifica */
     function codificar(){
 
         const texto_entrada = document.getElementById("texto_entrada").value;
         const texto_saida = texto_entrada
+        .replace(/e/g,"enter")
         .replace(/i/g,"imes")
         .replace(/a/g,"ai")
-        .replace(/e/g,"enter")
         .replace(/o/g,"obter")
         .replace(/u/g,"ufat")
     
@@ -27,6 +33,7 @@ document.addEventListener("DOMContentLoaded",function(){
         texto_vazio.style.display = "none";
         saida_texto_codificado.style.display = "block";
         codificar();
+        habilitaDesabilitaBotoes();
     }
 
     function verifica_texto_entrada(){
@@ -60,26 +67,10 @@ document.addEventListener("DOMContentLoaded",function(){
 
     function copiar_texto(){
 
-        const texto_codificado = document.getElementById("texto_codificado").value;
-        const inputElement = document.createElement("input");
-        inputElement.value = texto_codificado;
-        document.body.appendChild(inputElement);
-        inputElement.select();
-
-        navigator.clipboard.writeText(texto_codificado)
-        .then(() => {
-            alert("Texto copiado para a área de transferência!");
-        })
-        .catch(err => {
-            console.error('Erro ao copiar texto: ', err);
-        })
-        .finally(() => {
-            document.body.removeChild(inputElement);
-        });
-
+        const texto = document.getElementById("texto_codificado").innerText;  
+        navigator.clipboard.writeText(texto);
+      
     }
-
-
 
     const botao_copiar = document.getElementById("botao_copiar");
     botao_copiar.addEventListener("click", copiar_texto);
