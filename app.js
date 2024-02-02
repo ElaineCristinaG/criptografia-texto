@@ -1,83 +1,68 @@
 document.addEventListener("DOMContentLoaded",function(){
 
-    document.getElementById("texto_entrada").value = "";
-    document.getElementById("botao_decodifica").disabled = true;
-    document.getElementById("botao_codifica").disabled = false;
+    function startPage(){
 
-    const saida_texto_codificado = document.getElementById("saida_texto_codificado");
-    const texto_vazio = document.getElementById("texto_vazio");
-
-    saida_texto_codificado.style.display = "none";
-    texto_vazio.style.display = "block";
-
-    function habilitaDesabilitaBotoes(){
+        document.getElementById("texto_entrada").value = "";
         document.getElementById("botao_decodifica").disabled = false;
+        document.getElementById("botao_codifica").disabled = false;
+        document.getElementById("saida_texto_codificado").style.display = "none";
+        document.getElementById("texto_vazio").style.display = "block";
+
     }
-
-    /**Sessão Codifica */
-    function codificar(){
-
-        const texto_entrada = document.getElementById("texto_entrada").value;
-        const texto_saida = texto_entrada
-        .replace(/e/g,"enter")
-        .replace(/i/g,"imes")
-        .replace(/a/g,"ai")
-        .replace(/o/g,"obter")
-        .replace(/u/g,"ufat")
     
-        document.getElementById("texto_codificado").textContent = texto_saida;
-    }
-
     function alternaSection(){
         
         texto_vazio.style.display = "none";
         saida_texto_codificado.style.display = "block";
-        codificar();
-        habilitaDesabilitaBotoes();
     }
 
-    function verifica_texto_entrada(){
-        const verifica_texto = document.getElementById("texto_entrada").value;
-        if(verifica_texto != ""){
-            alternaSection()
-        }else{
-            alert("Digite um texto de entrada!")
-        }
+    function codificar(){
+
+        const texto_entrada = document.getElementById("texto_entrada").value;
+        const texto_saida = texto_entrada
+            .replace(/e/g,"enter")
+            .replace(/i/g,"imes")
+            .replace(/a/g,"ai")
+            .replace(/o/g,"ober")
+            .replace(/u/g,"ufat");
+
+        alternaSection();
+    
+        document.getElementById("texto_codificado").textContent = texto_saida;
     }
-
-    const botao_codificar = document.getElementById("botao_codifica");
-    botao_codificar.addEventListener("click", alternaSection);
-
-    /**sessão decodifica */
 
     function decodificar() {
-        const texto_codificado = document.getElementById("texto_codificado").textContent;
-        let texto_decodificado = texto_codificado
-            .replace(/ai/g, "a")
+        const texto_entrada = document.getElementById("texto_entrada").value;
+        const texto_decodificado = texto_entrada
             .replace(/enter/g, "e")
-            .replace(/imes/g, "i")
-            .replace(/obter/g, "o")
+            .replace(/imes/g, "i")    
+            .replace(/ai/g, "a")
+            .replace(/ober/g, "o")
             .replace(/ufat/g, "u");
+
+        alternaSection();
     
         document.getElementById("texto_codificado").textContent = texto_decodificado;
     }
-    
-    const botao_decodifica = document.getElementById("botao_decodifica");
-    botao_decodifica.addEventListener("click", decodificar);
 
-    function copiar_texto(){
+    function copiarTexto(){
 
         const texto = document.getElementById("texto_codificado").innerText;  
         navigator.clipboard.writeText(texto);
       
     }
 
+    startPage();
+
+    const botao_codificar = document.getElementById("botao_codifica");
+    botao_codificar.addEventListener("click", codificar);
+    
+    const botao_decodifica = document.getElementById("botao_decodifica");
+    botao_decodifica.addEventListener("click", decodificar);
+
     const botao_copiar = document.getElementById("botao_copiar");
-    botao_copiar.addEventListener("click", copiar_texto);
+    botao_copiar.addEventListener("click", copiarTexto);
 
-    
-
-    
 });
 
 
