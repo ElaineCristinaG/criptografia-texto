@@ -25,7 +25,6 @@ body{
     height: 100vh;
     box-sizing:border-box;
     color: var(--cor-cinza);
-    height: 100vh;
     font-family: var(--font-Inter);
     background-color: var(--cor-fundo);
 }
@@ -66,7 +65,7 @@ main{
     font-family: var(--font-Inter);
     color: var(--cor-azul-escuro);
     width: 400px;
-    height:400px;
+    height:52vh;
     word-wrap:break-word;
     justify-content: center;
     outline: none;
@@ -108,7 +107,6 @@ main{
     border-radius: var(--borda-botoes);
 }
 
-
 .botao_escuro{
     background-color: var(--cor-azul-escuro);
     border:none;
@@ -141,7 +139,7 @@ button.botao_claro:active{
     flex-direction: column;
     align-items: center;
     width: 27%;
-    height: 550px;
+    height: 70vh;
     background-color: var(--cor-branca);
     border-radius: var(--borda-section-saida);
     text-align: center;   
@@ -180,15 +178,15 @@ button.botao_claro:active{
     display: flex;
     flex-direction: column;
     gap:3rem;
-    align-items: center;
     padding-bottom: 5% 5%;
+    align-items: center;
+    width: 310px;
 }
 
 .texto_codificado{
     padding-top: 5%;
-    height: 400px;
+    height: 50vh;
     word-wrap:break-word;
-    padding-bottom: 5%;
 }
 
 footer{
@@ -225,8 +223,7 @@ footer section{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 1% 0%;
-       
+        padding: 1% 0%;   
     }
 
     header {
@@ -236,7 +233,7 @@ footer section{
     }
 
     header img{
-        width: 10vw;
+        width: 5vw;
     }
 
     .flexivel_input{
@@ -247,10 +244,10 @@ footer section{
     section textArea {
         width:100%;
         height: 90px;
-        padding-left: 0%;
         font-size: 14px;
         text-align: center;
-        vertical-align: middle;   
+        vertical-align: middle;  
+        padding-top: 10%; 
     }
 
     .flexivel_img {
@@ -283,7 +280,8 @@ footer section{
 
     .flexivel_output{
         width: 400px;
-        height: 90%;
+        height: 30vh;
+        padding-bottom: 10vh;
     }
 
     .imagem_menino{
@@ -309,5 +307,8 @@ footer section{
         font-size: 0.7rem;   
     }
 
+    footer{
+        position:absolute;
+    }
   
 }
