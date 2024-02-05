@@ -17,36 +17,40 @@
     <main>  
 
         <section class="flexivel_input" id="section_entrada">  
-            <div>
+            <div class="div_texto_entrada">
                 <textarea id="texto_entrada" placeholder="Digite o texto aqui"></textarea>
-                <div class="flexivel_img">
-                    <img class="flexivel_imagem" src="imagem/bi_exclamation-circle-fill.png">
-                    <span class="flexivel_span">Apenas letras minúsculas e sem acento.</span>
-                </div>
             </div>
-            <div class="flexivel_botoes">
-                <button class="botao botoes_esquerda" id="botao_codifica">Codificar</button>
-                <button class="botao botoes_esquerda"id="botao_decodifica" >Decodificar</button>
+
+            <div class="flexivel_img">
+                <img class="flexivel_imagem" src="imagem/bi_exclamation-circle-fill.png">
+                <span class="flexivel_span">Apenas letras minúsculas e sem acento.</span>
+            </div>
+
+            <div class="flexivel_botoes">                
+                <button class="botao_escuro botoes" id="botao_codifica">Criptografar</button>
+                <button class="botao_claro botoes"id="botao_decodifica" >Descriptografar</button>
             </div>
         </section>
 
         <section class="flexivel_output">
 
-            <div class="texto_vazio " id="texto_vazio">
-                <div  id="visibilidade">
+            <div class="texto_vazio"id="texto_vazio">
+                
                     <img class="imagem_menino" src="imagem/menino1x.png" alt="imagem menino">
-                    <h2>Nenhuma mensagem encontrada</h2>
-                    <p>Digite um texto que você deseja encriptografar ou descriptografar</p>
-                </div>    
+                    <div class="texto_vazio_p">
+                        <p class="frase_1">Nenhuma mensagem encontrada</p>
+                        <p class="frase_2">Digite um texto que você deseja encriptografar ou descriptografar</p>
+                    </div>
+                 
             </div> 
 
             <div class="texto_saida" id="saida_texto_codificado">
 
                 <p class="texto_codificado" id="texto_codificado"></p>
-                
                 <div class="div_botao_copiar">
-                    <button class="botao botao_copiar" id="botao_copiar">Copiar</button>
+                    <button class="botoes botao_claro" id="botao_copiar">Copiar</button>
                 </div>
+
             </div>
             
 
