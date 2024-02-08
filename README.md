@@ -1,5 +1,7 @@
 # Decodificador
-Este projeto codifica e descodifica um texto de entrada. Possui a opção de copiar o resultado de saída para área de transferencia
+Este projeto codifica e descodifica um texto de entrada. Possui a opção de copiar o resultado de saída para área de transferencia.\
+![pagina home mobile](./imagem/template-mobile-codificador.png) \
+![pagina home web](./imagem/template_codificador.png) 
 ## Tecnologias que estão presentes em meus projetos aqui no github
 <div>
 <a href="https://github.com/ElaineCristinaG/decodificador/">
